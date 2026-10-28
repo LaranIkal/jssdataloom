@@ -1,0 +1,69 @@
+20261027142641:********************************************************************************
+
+20261027142641:*** START Inventory Transactions Extract Script
+20261027142641:*** Loading configurations, and Inventory Transactions Query, Done.
+20261027142641:*** RUNNING Inventory Transactions Data Extraction.
+
+20261027142641:Query to get Data For Inventory Transactions:
+
+SELECT a.ItemCode, a.Warehouse, a.Location, 
+       STRFTIME('%m/%d/%Y', a.TransactionDate) AS TransactionDate,
+       TIME(a.TransactionDate) AS TransactionTime,
+       CAST(a.Quantity * b.Price *10000 AS INTEGER)/10000.0 AS TransactionAmount -- Same behavior as Oracle's TRUNC(x,4)
+FROM InventoryTransactions a
+  JOIN ItemPrices b
+    ON a.ItemCode = b.ItemCode 
+WHERE TransactionAmount > 0
+
+
+20261027142642:DONE Inventory Transactions Data Extraction, Records Extracted:15541, Printed Records After Filters:7904
+20261027142642:Closing DB Connections And Files.
+
+20261027142642:*** END Inventory Transactions Extract Script 
+
+20261027144745:********************************************************************************
+
+20261027144745:*** START Inventory Transactions Extract Script
+20261027144745:*** Loading configurations, and Inventory Transactions Query, Done.
+20261027144746:*** RUNNING Inventory Transactions Data Extraction.
+
+20261027144746:Query to get Data For Inventory Transactions:
+
+SELECT a.ItemCode, a.Warehouse, a.Location, 
+       STRFTIME('%m/%d/%Y', a.TransactionDate) AS TransactionDate,
+       TIME(a.TransactionDate) AS TransactionTime,
+       CAST(a.Quantity * b.Price *10000 AS INTEGER)/10000.0 AS TransactionAmount -- Same behavior as Oracle's TRUNC(x,4)
+FROM InventoryTransactions a
+  JOIN ItemPrices b
+    ON a.ItemCode = b.ItemCode 
+WHERE TransactionAmount > 0
+
+
+20261027144746:DONE Inventory Transactions Data Extraction, Records Extracted:15541, Printed Records After Filters:7904
+20261027144746:Closing DB Connections And Files.
+
+20261027144746:*** END Inventory Transactions Extract Script 
+
+20261027145010:********************************************************************************
+
+20261027145010:*** START Inventory Transactions Extract Script
+20261027145010:*** Loading configurations, and Inventory Transactions Query, Done.
+20261027145011:*** RUNNING Inventory Transactions Data Extraction.
+
+20261027145011:Query to get Data For Inventory Transactions:
+
+SELECT a.ItemCode, a.Warehouse, a.Location, 
+       STRFTIME('%m/%d/%Y', a.TransactionDate) AS TransactionDate,
+       TIME(a.TransactionDate) AS TransactionTime,
+       CAST(a.Quantity * b.Price *10000 AS INTEGER)/10000.0 AS TransactionAmount -- Same behavior as Oracle's TRUNC(x,4)
+FROM InventoryTransactions a
+  JOIN ItemPrices b
+    ON a.ItemCode = b.ItemCode 
+WHERE TransactionAmount > 0
+
+
+20261027145011:DONE Inventory Transactions Data Extraction, Records Extracted:15541, Printed Records After Filters:7904
+20261027145011:Closing DB Connections And Files.
+
+20261027145011:*** END Inventory Transactions Extract Script 
+
