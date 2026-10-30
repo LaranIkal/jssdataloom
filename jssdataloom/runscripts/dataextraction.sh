@@ -8,5 +8,5 @@ SCRIPT_NAME="dataextraction.jss"
 
 cd "$WORK_DIR" || exit 1
 
-java --enable-native-access=ALL-UNNAMED --sun-misc-unsafe-memory-access=allow -cp "$JSS_HOME/jss-1.2.jar:$JSS_HOME/jarlib/*" org.jss.jss "$SCRIPT_NAME" "$JSS_HOME"
+$HOME/Apps/graalvmjdk25/bin/java --enable-native-access=ALL-UNNAMED --sun-misc-unsafe-memory-access=allow -cp "$JSS_HOME/jss-1.2.jar:$JSS_HOME/jarlib/*" org.jss.jss "$SCRIPT_NAME" "$JSS_HOME"
 
