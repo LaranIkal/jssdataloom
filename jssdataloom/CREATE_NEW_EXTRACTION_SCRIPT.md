@@ -7,23 +7,23 @@
 ## 1. Create the folders and files structure
 ```
 📁 jss (JavaScript PolyglotContext shell), this is the root folder.
-├──📁runscripts
+├──📁 runscripts
 |  ├── mynewextract.sh             ← Shell file on Linux to start the extract JavaScript script
 |  └── mynewextract.bat            ← Batch file on Windows to start the extract JavaScript script
-└──📁scripts
-   └──📁mynewextract                        
+└──📁 scripts
+   └──📁 mynewextract                        
       ├── mynewextract.jss         ← main script
       ├── mynewextractqueries.jss  ← SQL queries
       ├── filtersandxref.txt       ← (optional) filter/xref data
-      ├──📁datafiles               ← Extracted data files directory 
-      ├──📁docs
-      └──📁log
+      ├──📁 datafiles              ← Extracted data files directory 
+      ├──📁 docs
+      └──📁 log
 ```
 
 ## 2. `Extraction Definition: Data Extraction Layout And Description.xlsx`
 
 ```markdown
-"📁docs/Data Extraction Layout And Description.xlsx"
+"📁 docs/Data Extraction Layout And Description.xlsx"
 Work on this document before customizing scripts. 
 Copy from folder: dataextraction/docs
 
@@ -34,11 +34,31 @@ Copy from folder: dataextraction/docs
 ```markdown
 
 📁 jss (JavaScript PolyglotContext shell)
-├──📁jarlib  ← All your JDBC libaries. 
+├──📁 jarlib  ← All your JDBC libaries. 
 
 Update them with runscripts/getjarlib.sh(Linux) or runscripts/getjarlib.bat(Windows), 
 these shell/batch run scripts/utils/getjarlib.jss
 or you can download the JDBC jar for your DataBase to jarlib folder.
+```
+
+## NOTE: Before Editing Your DataExtraction Scripts
+
+```markdown
+**Install an editor:** 
+[VSCodium](https://vscodium.com/)(telemetry-free)(https://vscodium.com/)  
+or [VS Code](https://code.visualstudio.com/)(disable telemetry in settings)
+(https://code.visualstudio.com). Core program is the same.
+
+**One-time setup — associate `.jss` with JavaScript:**
+
+1. Open any `.jss` file using vscodium/vscode.
+2. Hit `Ctrl+Shift+P` → type **change language mode** → select it with a mouse click.
+2. **Configure File Association for [jss]** should be displayed, type it if not, 
+    → select it with a mouse click.
+3. Pick **JavaScript**.
+
+Syntax highlighting is now active for all `.jss` files.   
+
 ```
 
 

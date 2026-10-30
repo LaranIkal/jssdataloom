@@ -2,6 +2,9 @@
 
 GraalVM polyglot context based data extraction tool. Weaves DB queries, filter rules, and xref mappings into clean output files.
 
+### Download jssdataloom latest release from github: https://github.com/LaranIkal/jssdataloom
+ or from github green -Code- button, download zip.
+
 ## What it does
 
 Takes database rows, filter rules, and cross-reference mappings, and weaves them into a single structured output. 
