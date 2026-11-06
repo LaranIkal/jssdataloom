@@ -4,10 +4,10 @@ var config = {
   FIELDSEPARATOR: ',',
   FIELDENCLOSING: '"',
   SQLITETEST: {
-    DBPATH:'../data/sampledata.sqlite' 
+    DBPATH: scriptsPath + 'data/sampledata.sqlite' 
   },
   SQLITEPROD: {
-    DBPATH:'../data/sampledata.sqlite' 
+    DBPATH: scriptsPath + 'data/sampledata.sqlite' 
   },
   ORATESTSERVER: {
     ORASERVER:'mytestdb.server.com',
@@ -27,3 +27,5 @@ var config = {
 
 // If reached 3 MB, clean log and restart it:
 // MAXLOGFILESIZE: 3 * 1024 * 1024
+// From dataextaction.jss, when loading config we have:
+// var scriptsPath = jssdataloomHome + "/scripts/"
