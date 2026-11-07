@@ -12,14 +12,17 @@ Data extraction framework using GraalVM Polyglot Context (GraalJS + Java).
 
 ```
 📁 jss (JavaScript PolyglotContext shell), this is the root folder.
-├── jss-1.2.jar
+├── jss-1.2.jar                  # JavaScript PolyglotContext shell, fat jar
+├── jssrepl.jar                  # JavaScript PolyglotContext interactive shell, fat jar
 ├──📁runscripts
-|  ├── cleanfile.bat            # Starts utils/cleanfile.jss on Windows
-|  ├── cleanfile.sh             # Starts utils/cleanfile.jss on Linux
-|  ├── dataextraction.bat       # Shell file for Linux to start the extract JavaScript script
-|  ├── dataextraction.sh        # Batch file for Windows to start the extract JavaScript script
-|  ├── getjarlib.bat            # Starts utils/getjarlib.jss on Windows
-|  └── getjarlib.sh             # Starts utils/getjarlib.jss on Linux
+│  ├── cleanfile.bat            # Starts utils/cleanfile.jss on Windows
+│  ├── cleanfile.sh             # Starts utils/cleanfile.jss on Linux
+│  ├── dataextraction.bat       # Shell file for Linux to start the extract JavaScript script
+│  ├── dataextraction.sh        # Batch file for Windows to start the extract JavaScript script
+│  ├── getjarlib.bat            # Starts utils/getjarlib.jss on Windows
+│  ├── getjarlib.sh             # Starts utils/getjarlib.jss on Linux
+│  ├── jssrepl.bat              # jssrepl launcher on Windows
+│  └── jssrepl.sh               # jssrepl launcher on Linux
 └──📁scripts
    ├── config.jss                    # Global configuration
    ├──📁lib
@@ -158,7 +161,4 @@ When writing output rows:
 - Log file: `scripts/<name>/log/<name>.log`
 - `NoXref` file captures rows that passed the filter but had no xref match
 ```
-
-Save this as `README.md` in your scripts root. Want me to adjust anything — add a section, change the tone, or split it into separate docs per library?
-
 
