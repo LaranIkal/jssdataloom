@@ -2,13 +2,21 @@
 
 GraalVM polyglot context based data extraction tool. Weaves DB queries, filter rules, and xref mappings into clean output files.
 
-### Download jssdataloom latest release from github: https://github.com/LaranIkal/jssdataloom
- or from github green -Code- button, download zip.
-
 ## What it does
 
 Takes database rows, filter rules, and cross-reference mappings, and weaves them into a single structured output. 
 No build step, no framework — just plain `.jss`(JavaScript) scripts with native JDBC access. Supports any databases with JDBC driver.
+
+### Download jssdataloom latest release from github: https://github.com/LaranIkal/jssdataloom
+ or from github green -Code- button, download zip.
+
+### Install jssdataloom: 
+- From your download, open: jssdataloom/Install.pdf or on github: https://github.com/LaranIkal/jssdataloom/blob/main/jssdataloom/Install.pdf
+
+### Create your first data extraction: 
+- From your download, open: jssdataloom/CREATE_NEW_EXTRACTION_SCRIPT.pdf or on github: https://github.com/LaranIkal/jssdataloom/blob/main/jssdataloom/CREATE_NEW_EXTRACTION_SCRIPT.pdf
+
+
 
 ## Key features
 
@@ -26,29 +34,33 @@ No build step, no framework — just plain `.jss`(JavaScript) scripts with nativ
 - JDBC drivers on classpath (Oracle, PostgreSQL, SQLite, etc.)
 
 ## Creating a new data extraction
-- See CREATE_NEW_EXTRACTION_SCRIPT.pdf
+- From your download, open: jssdataloom/CREATE_NEW_EXTRACTION_SCRIPT.pdf or on github: https://github.com/LaranIkal/jssdataloom/blob/main/jssdataloom/CREATE_NEW_EXTRACTION_SCRIPT.pdf
 
-## Quick start
+
+## Run the data extraction included with jssdataloom
 ### Linux
-```basch
-runscripts\dataextraction.sh
+```bash
+jssdataloom/runscripts/dataextraction.sh
 ```
 ### Windows
 ```batch
-runscripts\dataextraction.bat
+jssdataloom\runscripts\dataextraction.bat
 ```
 
 ## Project Structure:
 ```
 jss/ (JavaScript Polyglot Context shell), this is the root folder.
-├── jss-1.2.jar
+├── jss-1.2.jar                  # JavaScript PolyglotContext shell, fat jar
+├── jssrepl.jar                  # JavaScript PolyglotContext interactive shell, fat jar
 ├── runscripts/
 │   ├── cleanfile.bat            # Starts utils/cleanfile.jss on Windows
 │   ├── cleanfile.sh             # Starts utils/cleanfile.jss on Linux
 │   ├── dataextraction.bat       # Batch file for Windows to start the extract script
 │   ├── dataextraction.sh        # Shell script for Linux to start the extract script
 │   ├── getjarlib.bat            # Starts utils/getjarlib.jss on Windows
-│   └── getjarlib.sh             # Starts utils/getjarlib.jss on Linux
+│   ├── getjarlib.sh             # Starts utils/getjarlib.jss on Linux
+│   ├── jssrepl.bat              # jssrepl launcher on Windows
+│   └── jssrepl.sh               # jssrepl launcher on Linux
 └── scripts/
     ├── config.jss                    # Global configuration
     ├── lib/
